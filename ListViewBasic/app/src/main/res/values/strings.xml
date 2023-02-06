@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">List View Basic</string>
+    <string name="danh_sach_mon_hoc">DANH SÁCH MÔN HỌC</string>
+    <string name="ten_mon_hoc">Tên Môn Học:</string>
+    <string name="so_tin_chi">Số Tín Chỉ:</string>
+    <string name="nhap_ten_mon_hoc">Nhập tên môn học</string>
+    <string name="nhap_so_tin_chi">Nhập số tín chỉ</string>
+    <string name="them">Thêm</string>
+    <string name="sua">Sửa</string>
+    <string name="xoa">Xóa</string>
+    <string name="todo">TODO</string>
+    <string name="mon_hoc">Môn Học</string>
+    <string name="tin_chi">Tín Chỉ</string>
+    <string name="descriptions">Descriptions</string>
+    <string name="monhoc">Môn Học:</string>
+    <string name="tinchi">Tín Chỉ:</string>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/danh_sach_mon_hoc"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="@string/ten_mon_hoc"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_MonHoc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_MonHoc" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="@string/so_tin_chi"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_TinChi"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/editText_TinChi" />
+
+    <EditText
+        android:id="@+id/editText_MonHoc"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/nhap_ten_mon_hoc"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:autofillHints=""
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editText_TinChi"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/nhap_so_tin_chi"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/editText_MonHoc"
+        android:inputType="number"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/button_Them"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="@string/them"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@id/button_Sua"/>
+
+    <Button
+        android:id="@+id/button_Sua"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="@string/sua"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@id/button_Xoa"
+        app:layout_constraintStart_toEndOf="@+id/button_Them"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/button_Xoa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="@string/xoa"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_Sua"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="6dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Sua">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
