@@ -3,6 +3,7 @@ package com.fetchmefun.listviewbasic;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     "Không" : editText_TinChi.getText().toString().trim();
             String Descriptions = "Bế Chí Kiên Thất Bại " +
                     (dataList.size() + 1) +
-                    "If I get hurts, then the hurts will become strength. " +
+                    "! If I get hurts, then the hurts will become strength. " +
                     "To be a successor, I have to take the losses.";
             int Image = getImage(mapImages);
             dataList.add(new MonHocModelClass(MonHoc,TinChi,Descriptions,Image));
@@ -79,9 +80,14 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Đã Thêm!",Toast.LENGTH_SHORT).show();
         });
         listView.setOnItemLongClickListener((adapterView, view, i, l) -> {
-            Toast.makeText(this,"Đã Xóa! " + dataList.get(i).getMonHoc(),Toast.LENGTH_SHORT).show();
-            dataList.remove(i);
-            myListViewAdapter.notifyDataSetChanged();
+            Bundle bundle = new Bundle();
+            bundle.putString("MonHoc", dataList.get(i).getMonHoc());
+            bundle.putString("TinChi", dataList.get(i).getTinChi());
+            bundle.putString("Desc", dataList.get(i).getDescription());
+            bundle.putInt("Image",dataList.get(i).getImage());
+            Intent intent = new Intent(this,MainActivity2.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
             return true;
         });
         listView.setOnItemClickListener((adapterView, view, i, l) -> {

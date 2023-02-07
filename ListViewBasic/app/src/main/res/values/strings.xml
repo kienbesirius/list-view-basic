@@ -14,4 +14,6 @@
     <string name="descriptions">Descriptions</string>
     <string name="monhoc">Môn Học:</string>
     <string name="tinchi">Tín Chỉ:</string>
+    <string name="thong_tin_chi_tiet">THÔNG TIN CHI TIẾT</string>
+    <string name="description">Description:</string>
 </resources>

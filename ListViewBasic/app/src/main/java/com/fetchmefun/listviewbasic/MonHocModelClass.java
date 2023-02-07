@@ -1,6 +1,6 @@
 package com.fetchmefun.listviewbasic;
 
-public class MonHocModelClass {
+public class MonHocModelClass{
     private String MonHoc;
     private String TinChi;
     private String Description;
